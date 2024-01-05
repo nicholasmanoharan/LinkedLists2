@@ -1,29 +1,24 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef PERSON_H_
+#define PERSON_H_
 
-#include "Student.h"
+#include <string>
 
-class Node {
+class Person {
 public:
-   
-
-   //initiating variables
-    Student* value;
-    Node* next;
-
-   //initiating the constructors
-    Node(Student* newStudent);
-    Node(Student* newStudent, Node* nextNode);
-
-
-    ~Node();
-
-   
-    Student* getStudent() const;
-    Node* getNext() const;
+    
+    Person();
+    explicit Person(const std::string& name);  // Ensuring the right inputs are in the terminal
 
     
-    void setNext(Node* newNode);
+    void setName(const std::string& newName);
+
+    
+    void display() const;  
+
+private:
+
+    std::string name;
+    
 };
 
 #endif 
