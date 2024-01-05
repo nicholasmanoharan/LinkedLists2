@@ -1,18 +1,22 @@
-#ifndef PERSON_H
-#define PERSON_H
-#include <string> 
+#ifndef PERSON_H_
+#define PERSON_H_
+
+#include <string>
 
 class Person {
-    public: 
-        Person(); 
-        Person(const std::string& name, int age); 
-        void setName(const std::string& newName);
-        void setAge(int newAge);
-        void display();
+public:
+   
+    Person();
+    explicit Person(const std::string& name); // Explicit to avoid implicit conversions
 
-    private: 
-        std::string name;
-        int age;
+   
+    void setName(const std::string& newName);
+
+
+    void display() const; // Mark it as const
+
+private:
+    std::string name;
 };
 
-#endif
+#endif 
