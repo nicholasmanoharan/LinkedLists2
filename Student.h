@@ -6,11 +6,11 @@
 
 class Student : public Person {
 public:
-   
+ 
     Student();
-    explicit Student(const std::string& name, const std::string& studentId);
+    Student(const std::string& name, const std::string& studentId);
 
-   
+    //methods to display all details
     void inputDetails();
     void displayStudent() const;
     const std::string& getStudentId() const;
