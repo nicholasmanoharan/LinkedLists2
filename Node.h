@@ -1,21 +1,29 @@
 #ifndef NODE_H
 #define NODE_H
+
 #include "Student.h"
 
-class Node { 
-    public: 
-        Student* value;
-        Node* next;
+class Node {
+public:
+   
 
-        Node(Student* newStudent);
-        Node(Student* newStudent, Node* nextNode);
+   //initiating variables
+    Student* value;
+    Node* next;
 
-        ~Node();
+   //initiating the constructors
+    Node(Student* newStudent);
+    Node(Student* newStudent, Node* nextNode);
 
-        Student* getStudent() const; 
-        Node* getNext() const;
-        void setNext(Node* newNode);
-        
+
+    ~Node();
+
+   
+    Student* getStudent() const;
+    Node* getNext() const;
+
+    
+    void setNext(Node* newNode);
 };
 
-#endif
+#endif 
